@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio Section</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #1e2326; }
+        #portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; padding: 2rem; background-color: #1e2326; }
+        .card { background: #262d31; border: 0.5px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 2rem; display: flex; flex-direction: column; gap: 12px; transition: transform 0.2s, border-color 0.2s; }
+        .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
+        .card-thumb { width: 100%; height: 140px; background: #2e373c; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .card-thumb svg { opacity: 0.25;}
+        .card-tag { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #f07f81; font-family: monospace; }
+        .card-title { font-size: 16px; font-weight: 500; color: #e8eaed; font-family: 'Georgia', serif; }
+        .card-desc { font-size: 13px; color: #8a9199; line-height: 1.6; flex: 1; }
+        .card-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 0.5px solid rgba(255,255,255,0.07); }
+        .card-stack { display: flex; gap: 6px; flex-wrap: wrap; }
+        .badge { font-size: 11px; padding: 3px 8px; border-radius: 4px; background: rgba(95,168,211,0.1); color: #f07f81; font-family: monospace; }
+        .btn-visit { font-size: 12px; padding: 7px 14px; border-radius: 7px; border: 0.5px solid rgba(95,168,211,0.4); background: transparent; color: #f07f81; cursor: pointer; font-family: inherit; transition: background 0.18s, color 0.18s; white-space: nowrap; }
+        .btn-visit:hover { background: #f07f81; color: #1e2326; }
+    </style>
+</head>
+<body>
+    <div id="portfolio"></div>
+    
+
+    <script>
+        const projects = [
+            { 
+        tag: "Web App", 
+        title: "Real Estate Project", 
+        image_url: "/images/AGSrealestate.png",
+        desc: "A professional real estate web platform built to showcase property listings, agent profiles, and market insights with a clean, conversion-focused user experience.",
+        stack: ["React", "D3"], 
+        url: "https://catherinecarrillo.chime.me" 
+        },
+        { 
+        tag: "SaaS", 
+        title: "Logistics Marketplace",
+        image_url: "/images/AgsRealtimetracking.png", 
+        desc: "A full-scale logistics marketplace connecting customers, merchants, and riders in real time — with live order tracking, role-based dashboards, and seamless delivery management.",
+        stack: ["Next.js", "Stripe"], 
+        url: "https://cabinetoffscape-server-900x.onrender.com" 
+        },
+        { 
+        tag: "Ecommerce", 
+        title: "Fullstack Dev Project", 
+        image_url: "/images/AgsEcommerce.png",
+        desc: "A fully functional e-commerce platform with product management, secure checkout, order tracking, and a responsive storefront built for real business operations.",
+        stack: ["React Native"], 
+        url: "https://mojibola.com.ng" 
+        },
+        { 
+        tag: "Web App", 
+        title: "Property Listings", 
+        image_url: "/images/AGSrealestate.png",
+        desc: "A dynamic property listing platform with advanced search filters, agent profiles, and responsive design — built to help buyers and renters find their perfect property fast.",
+        stack: ["Node.js", "MongoDB"], 
+        url: "https://lifestylepropertypartners.com/agent/scott-lincicome" 
+        },
+        { 
+        tag: "SaaS", 
+        title: "Realtors", 
+        image_url: "/images/AgsLandingpage.png",
+        desc: "A SaaS platform tailored for real estate professionals — featuring lead capture, listing management, and a branded client-facing portal that builds trust and drives enquiries.",
+        stack: ["HTML", "CSS", "JS"], 
+        url: "https://meganrummel.clearchoiceenterprises.com" 
+        },
+        { 
+        tag: "Portfolio", 
+        title: "Real Estate Project",
+        image_url: "/images/AgsLandingpage.png", 
+        desc: "A sleek, high-converting real estate portfolio site showcasing property listings, agent credentials, and client testimonials — designed to establish authority and generate inbound leads.",
+        stack: ["Python"], 
+        url: "https://www.ussw.net/agent/Lois-Briesemeister/8428773" 
+        },
+        { 
+        tag: "Portfolio", 
+        title: "Property Listing",
+        image_url: "/images/AGSrealestate.png", 
+        desc: "A modern property listing portfolio with location-based search, high-resolution gallery views, and a direct enquiry system — turning browsers into serious buyers.",
+        stack: ["Express", "JWT"], 
+        url: "https://www.emceearahteam.com" 
+        },
+        { 
+        tag: "Ecommerce", 
+        title: "UI Kit", 
+        image_url: "/images/AgsEcommerce.png",
+        desc: "A production-ready UI component library with fully customisable design tokens, dark and light mode support, and complete Figma source files for rapid product development.",
+        stack: ["CSS", "Figma"], 
+        url: "https://example.com" 
+        },
+        { 
+        tag: "AI", 
+        title: "Chat App", 
+        image_url: "/images/AgsRealtimetracking.png",
+        desc: "An AI-powered conversational interface with real-time streaming responses, persistent conversation history, and a clean UI — built to deliver intelligent, context-aware interactions.",
+        stack: ["OpenAI", "React"], 
+        url: "https://example.com" 
+        },
+        { tag: "Game", title: "Browser Game", image_url: "/images/AgsLandingpage.png", desc: "2D browser-based puzzle game built with canvas and vanilla JS.", stack: ["Canvas", "JS"], url: "https://example.com" },
+    ];
+       
+
+    const container  = document.getElementById('portfolio');
+    for (let index = 0; index < 10; index++) {
+        const div = document.createElement('div');
+        div.className = 'card';
+        const p = projects[index];
+
+        const svg = `<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#f07f81" stroke-width="1.5">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+             </svg>`;
+             svg.style = ' opacity: 0.25';
+
+        div.innerHTML = `
+        <div class="card-thumb">
+             <img src=${p.image_url} width="100%" height="100%" alt=${svg}> 
+        </div>
+        <span class="card-tag">${p.tag}</span>
+        <p class="card-title">${p.title}</p>
+        <p class="card-desc">${p.desc}</p>
+        <div class="card-footer">
+            <div class="card-stack">${p.stack.map(s => `<span class="badge">${s}</span>`).join('')}</div>
+            <button class="btn-visit" onclick="window.open('${p.url}', '_blank')">Visit site ↗</button>
+        </div>
+        `;
+
+    container.appendChild(div);
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- 
+
+
+<div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
+                            <div class="portfolio-item">
+                                <a href="https://cabinetoffscape-server-900x.onrender.com" class="portfolio-single portfolio-image">
+                                    <div class="item-box">
+                                        <div class="item-image">
+                                            <img src="images/offscape.png" width="350" height="410" class="d-block img-fluid mx-auto" alt="">
+                                        </div>
+                                        <div class="item-details d-flex align-items-center">
+                                            <div class="item-details-ins text-center w-100">
+                                                <div class="mb-2">
+                                                    <span class="mbri-link"></span>
+                                                </div>
+                                                <h3>Logistics Marketplace</h3>
+                                                <p>Saas</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 backenddevelopment">
+                            <div class="portfolio-item">
+                                <a href="https://drive.google.com/drive/folders/1wNxkp8qr54ixUuAF16xuPYX2idiXNphS?usp=sharing" class="portfolio-single iframe_popup">
+                                    <div class="item-box">
+                                        <div class="item-image">
+                                            <img src="images/ChatGPT Image Mar 11, 2026, 05_56_49 PM.png" width="350" height="410" class="d-block img-fluid mx-auto" alt="">
+                                        </div>
+                                        <div class="item-details d-flex align-items-center">
+                                            <div class="item-details-ins text-center w-100">
+                                                <div class="mb-2">
+                                                    <span class="mbri-link"></span>
+                                                </div>
+                                                <h3>Real Estate & Property</h3>
+                                                <p>Designs</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 seo">
+                            <div class="portfolio-item">
+                                <a href="https://mojibola.com.ng" class="portfolio-single portfolio-image">
+                                    <div class="item-box">
+                                        <div class="item-image">
+                                            <img src="images/ChatGPT Image Mar 11, 2026, 06_11_30 PM.png" width="350" height="410" class="d-block img-fluid mx-auto" alt="">
+                                        </div>
+                                        <div class="item-details d-flex align-items-center">
+                                            <div class="item-details-ins text-center w-100">
+                                                <div class="mb-2">
+                                                   <span class="mbri-link"></span>
+                                                </div>
+                                                <h3>Buy Me Code</h3>
+                                                <p>Websites</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 backenddevelopment">
+                            <div class="portfolio-item ">
+                                <a href="https://github.com/innovated-Dev" target="_blank" class="portfolio-single">
+                                    <div class="item-box">
+                                        <div class="item-image">
+                                            <img src="images/ChatGPT Image Mar 11, 2026, 11_17_24 PM.png" width="350" height="410" class="d-block img-fluid mx-auto" alt="">
+                                        </div>
+                                        <div class="item-details d-flex align-items-center">
+                                            <div class="item-details-ins text-center w-100">
+                                                <div class="mb-2">
+                                                    <span class="mbri-link"></span>
+                                                </div>
+                                                <h3>Sales Automation</h3>
+                                                <p>Marketing</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
+                            <div class="portfolio-item">
+                                <a href="https://github.com/innovated-Dev" class="portfolio-single portfolio-image">
+                                    <div class="item-box">
+                                        <div class="item-image">
+                                            <img src="images/ChatGPT Image Mar 11, 2026, 11_29_28 PM.png" width="350" height="410" class="d-block img-fluid mx-auto" alt="">
+                                        </div>
+                                        <div class="item-details d-flex align-items-center">
+                                            <div class="item-details-ins text-center w-100">
+                                                <div class="mb-2">
+                                                    <span class="mbri-link"></span>
+                                                </div>
+                                                <h3>Lead Magnet</h3>
+                                                <p>Marketing</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 mb-2 mt-4 frontenddevelopment">
+                            <div class="portfolio-item">
+                                <a href="https://github.com/innovated-Dev" class="portfolio-single portfolio-image">
+                                    <div class="item-box">
+                                        <div class="item-image">
+                                            <img src="images/ChatGPT Image Mar 11, 2026, 11_35_40 PM.png" width="350" height="410" class="d-block img-fluid mx-auto" alt="">
+                                        </div>
+                                        <div class="item-details d-flex align-items-center">
+                                            <div class="item-details-ins"></div>
+                                            <div class="item-details-ins text-center w-100">
+                                                <div class="mb-2">
+                                                    <span class="mbri-link"></span>
+                                                </div>
+                                                <h3>Ecommerce Store</h3>
+                                                <p>Websites</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>-->
