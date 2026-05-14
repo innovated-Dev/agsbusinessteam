@@ -7,7 +7,7 @@
 
   // --- CONFIG ---
   var WEB3FORMS_API_KEY = "88d337cb-69e8-40df-9d83-46075f705646"; // 👈 Replace this
-  var POPUP_DELAY_MS    = 3000;
+  var POPUP_DELAY_MS    = 100;
   var COOLDOWN_DAYS     = 7;
   var STORAGE_KEY       = "ags_popup_closed";
 
@@ -79,7 +79,7 @@
     if (getCookie(STORAGE_KEY)) return;
 
     var popupTriggered = false;
-
+    showPopup()
     // Activate exit-intent only after delay
     setTimeout(function () {
 
