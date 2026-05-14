@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block style switcher and asset folders from indexing
+Disallow: /css/
+Disallow: /js/
+
+# Sitemap location
+Sitemap: https://ags-team.vercel.app/sitemap.xml

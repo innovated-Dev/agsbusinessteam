@@ -1,0 +1,64 @@
+/* Premium Typography */
+    .hero-title {
+        font-family: Inter, Poppins, sans-serif;
+        font-size: clamp(2rem, 5vw, 4.5rem);
+        font-weight: 700;
+        line-height: 1.2;
+        color: #ffffff;
+        letter-spacing: -1px;
+    }
+
+    /* Typed Text */
+    .welcome-text-type {
+        background: linear-gradient(90deg, #ffffff, #f07f81);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Premium Cursor */
+    .typed-cursor {
+        color: #f07f81;
+        font-size: 1em;
+        font-weight: 300;
+
+        animation: premiumBlink 1s infinite;
+        opacity: 1;
+
+        display: inline-block;
+        transform: translateY(-2px);
+
+        text-shadow:
+            0 0 5px rgba(240, 127, 129, 0.7),
+            0 0 12px rgba(240, 127, 129, 0.4);
+    }
+
+    /* Smooth Blink Animation */
+    @keyframes premiumBlink {
+
+        0%,
+        100% {
+            opacity: 1;
+            transform: translateY(-2px) scaleY(1);
+        }
+
+        50% {
+            opacity: 0;
+            transform: translateY(-2px) scaleY(0.85);
+        }
+    }
+
+    /* Optional Dark SaaS Background */
+    body {
+        background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
+
+        min-height: 100vh;
+
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+
+        /* padding: 40px; */
+    }

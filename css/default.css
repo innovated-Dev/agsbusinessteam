@@ -52,7 +52,10 @@ a:hover {
             transform: scale(0);
   }
   100% {
-    background: rgba(240, 127, 129, 0);
+     background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
   }
 }
 
@@ -63,10 +66,19 @@ a:hover {
             transform: scale(0);
   }
   100% {
-    background: rgba(240, 127, 129, 0);
+     background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
   }
 }
 
+.background_gpattern {
+    background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c !important;
+}
 section .form-group.form-focused label {
   color: #f07f81;
 }

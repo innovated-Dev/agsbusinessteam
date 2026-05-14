@@ -40,7 +40,10 @@ Table of Content
     1. SETTINGS
 ==================*/
 body {
-  background-color: #1e2326;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 h2 {
@@ -69,7 +72,10 @@ hr {
 
 /* 1.1 Preloader */
 #preloader {
-  background-color: #1e2326;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 blockquote footer {
@@ -131,11 +137,17 @@ main section.background_gpattern {
 }
 
 main section:not(.backgound-section):not(.home):nth-child(odd) {
-  background-color: #252b2f;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 main section:not(.backgound-section):not(.home):nth-child(odd) .form-group.form-focused label {
-  background-color: #252b2f;
+ background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 .box-shadow {
@@ -188,7 +200,10 @@ header .site-logo a {
 
 /* 3.2 Horizontal Header Style */
 header.horizontal_header .header-ins {
-  background-color: #1e2326;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
   padding: 17px 0px;
 }
 
@@ -285,8 +300,11 @@ section.about .about-info span.desc {
     6. SERVICE SECTION
 ========================*/
 .service-single {
-  background-color: #1e2326;
-  border: 1px solid #31383d;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
+  border: 1px solid #0a0f1c;
 }
 
 .service-single h3 {
@@ -301,7 +319,10 @@ section.about .about-info span.desc {
 }
 
 .portfolio-item .item-box .item-details {
-  background-color: rgba(0, 0, 0, 0.65);
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 .portfolio-item .item-box .item-details .item-detail-rect {
@@ -340,11 +361,14 @@ section.about .about-info span.desc {
 }
 
 .resume-list li:before {
-  border: 2px solid #31383d;
+  border: 2px solid #0a0f1c;
 }
 
 .resume-list li:after {
-  background-color: #31383d;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
   width: 2px;
   height: calc(100% - 43px);
   border-radius: 3px;
@@ -366,7 +390,10 @@ section.about .about-info span.desc {
 }
 
 .skill .progress {
-  background-color: #252b2f;
+  background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 .skill .skill-icon {
@@ -386,9 +413,12 @@ section.about .about-info span.desc {
     9. TESTIMONIAL SECTION
 ============================*/
 .testimonial-box {
-  border: 2px solid #1e2326;
+  border: 2px solid #0a0f1c;
   line-height: 23.5px;
-  background-color: #1e2326;
+  background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 .testimonial-box .author_picture {
@@ -401,8 +431,11 @@ section.about .about-info span.desc {
     10. BLOG SECTION
 ========================*/
 .news-item {
-  background-color: #1e2326;
-  border: 1px solid #31383d;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
+  border: 1px solid #0a0f1c;
 }
 
 .news-item .news-content .news-title .blog-permalink h3 {
@@ -469,7 +502,10 @@ section.about .about-info span.desc {
     12. FOOTER SECTION
 ========================*/
 footer.horizontal-footer {
-  background-color: #1e2326;
+  background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 footer.horizontal-footer.shadow_footer {
@@ -493,7 +529,10 @@ section.facts .fact-single, div.section.facts .fact-single {
     14. PROJECT SECTION
 ===========================*/
 section.project .box, div.section.project .box {
-  background-color: #1e2326;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 /*==========================
@@ -510,7 +549,10 @@ section.about_movie {
   height: 70px;
   line-height: 70px;
   font-size: 20px;
-  background-color: #1e2326;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
 }
 
 .btn-video-play:hover {
@@ -522,7 +564,10 @@ section.about_movie {
     16. SWITCHER SECTION
 ===========================*/
 #color-switcher .switcher-area {
-  background-color: #1e2326;
+   background:
+            radial-gradient(circle at top left, rgba(240, 127, 129, 0.08), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(15, 52, 96, 0.3), transparent 35%),
+            #0a0f1c;
   -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.02);
           box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.02);
 }
