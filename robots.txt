@@ -6,4 +6,4 @@ Disallow: /css/
 Disallow: /js/
 
 # Sitemap location
-Sitemap: https://ags-team.vercel.app/sitemap.xml
+Sitemap: https://agsbusinessteam.vercel.app/sitemap.xml
